@@ -1,0 +1,857 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* РЕСЕТ ================================================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 'Anek Latin', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*btn ===================================================================*/
+.main_btn{
+	padding: 16px 33px;
+	font-size: 16px;
+}
+
+.prod_btn{
+	padding: 0px 44px;
+	border: #E28343 solid 3px;
+	font-size: 13px;
+}
+
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	outline: none;
+    border-radius: 25px;
+    border: 3px solid #E28343;
+	line-height: 37px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #FFF3D3;
+	background-color: #774125;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+
+.btn:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0 #ffd20c;
+}
+.btn:active {
+	background-color: #efefef !important;
+}
+.btn:disabled {
+	background-color: #eee;
+	color: #444;
+	pointer-events: none;
+}
+
+.btn-2 {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 24px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #fff;
+	background-color: #05cd51;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.btn-2:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn-2:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.btn-2:active {
+	background-color: #058c38 !important;
+}
+.btn-2:disabled {
+	background-color: #aed2bc;
+	color: #444;
+	pointer-events: none;
+}
+/* main ===============================================================*/
+.container {
+    width: 100%;
+    max-width: 1232px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    background-color: #FFF3D3;
+    font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+a{
+	text-decoration: none;
+}
+
+.header a, .footer a{
+    color: black;
+
+}
+
+.header_inner{
+    display: flex;
+    padding: 68px 0px;
+    justify-content: space-between;
+}
+
+
+.logo{
+    background-color: brown;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a{
+    color: white;
+    font-size: 40px;
+}
+
+.nav{
+    width: 548px;
+    display: flex;
+    margin: 24px 20px 0px 0px;
+    justify-content: space-between;
+}
+
+.re_bin{
+    margin: 0px 80px 0px 0px;
+	background-color: #623820;
+	border-radius: 25px;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.preview__inner{
+    display: flex;
+	margin: 0px 0px 0px 195px;
+}
+
+.main_info{
+    padding: 139px 0px 0px 0px;
+    color: #442E23;
+    flex: 0 1 66%
+}
+
+.main_info h1{
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.main_info ul li{
+    margin-bottom: 40px;
+    font-size: 20px;
+	display: flex;
+    align-items: center;
+}
+
+.img_main{
+    flex: 0 1 44%;
+}
+
+.img_main img{
+    left: 1120px;
+    top: 186px;
+}
+
+
+.info{
+    background-color: #FFF3D3;
+    padding-top: 148px;
+}
+.info_inner{
+    text-align: center;
+	margin: 0px 195px;
+}
+
+.info_inner h2 ,.comments_inner h2, .contacts_inner h2{
+   font-size: 35px;
+   font-weight: 700;
+   color: #442E23;
+}
+
+.info_description{
+    display: flex;
+    margin-top: 48px;
+}
+
+.info_imgs{
+    flex: 0 1 30%;
+}
+
+.info_imgs img{
+	padding-bottom: 35px;
+}
+
+.info_text{
+    flex: 0 1 70%;
+	margin-left: 38px;
+    text-align: left;
+	font-size: 23px;
+}
+.info_text h3{
+	margin-bottom: 18px;
+}
+
+.comments_inner{
+	margin: 0px 195px;
+	text-align: center;
+}
+
+.comments{
+	background-color: #FFF3D3 ;
+	font-size: 20px;
+	padding-top: 30px;
+}
+
+.contacts{
+	background-color: #FFF3D3 ;
+	padding-top: 60px;
+}
+
+.contacts_inner{
+	margin: 0px 195px;
+	text-align: center;
+}
+
+.footer{
+    background-color: #E28343;
+    padding: 85px 0px;
+}
+
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview{
+    background-color: #FFF3D3;
+}
+
+.links a{
+    padding: 10px 0px 0px 0px;
+}
+
+.logos{
+    padding-top: 20px;
+}
+
+.comment_logo{
+	width: 94.01px;
+	height: 95px;
+	border: 5px solid #E28343;
+	border-radius: 50px;
+}
+
+.description{
+	padding-top: 140px;
+	font-family: Work Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.picture{
+width: 420px;
+border: #F20E6F solid 10px;
+/* Caramel */
+margin: 0px 47px;
+background: #E28343;
+border-radius: 25px;
+}
+
+.description_inner{
+	display: flex;
+	justify-content: center;
+}
+
+.description_cards{
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	color: #FFF3D3;
+}
+
+.map_block{
+	padding: 60px 40px;
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+
+}
+
+#map {
+	height: 100%;
+  }
+
+.map_block p {
+	margin: 10px 0px;
+}
+
+.description_card{
+width: 270px;
+padding: 30px 15px;
+background: #774125;
+border-radius: 25px;
+}
+
+.item{
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+	padding: 23px 100px;
+}
+
+.item p {
+	margin: 10px 30px;
+}
+
+.owl-prev{
+	margin: 0px 0px 0px 100px;
+}
+
+.owl-next{
+	margin: 0px 0px 0px 100px;
+}
+
+.product_inner{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.aside{
+	width: 20%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+.aside ul li{
+    margin-bottom: 24px;
+}
+
+.aside ul li button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.aside ul li button:hover{
+    color: #780e0e;
+}
+
+.close::before{
+	display: inline-block;
+	content: "\00d7";
+	font-size: 40px;
+}
+
+.submit::before{
+    display: inline-block;
+    content: '\2713';
+    font-weight: bold;
+    font-size: 25px;
+}
+.prod_img{
+    height: 280px;
+    width: 422px;
+    border: 5px solid brown;
+    border-radius: 10px;
+}
+
+.product_item_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.product_list{
+	padding-left: 194px;
+    padding-bottom: 94px;
+	width: 80%;
+}
+
+.product_item:nth-child(2n)
+{
+	flex-direction: row-reverse;
+}
+
+
+.product_item:nth-child(2n) p
+{
+	text-align: right;
+	margin-left: 94px;
+}
+
+.product_item:nth-child(2n+1) p
+{
+	text-align: left;
+	margin-right: 94px;
+}
+
+
+.product_item:nth-child(2n) h2{
+	text-align: right;
+}
+
+.product_item:nth-child(2n) .price_block{
+
+	flex-direction: row-reverse;
+}
+
+.breadcumbs{
+	padding-left: 194px;
+}
+
+.product_item{
+	display: flex;
+	margin-top: 80px;
+	gap: 30px;
+}
+
+
+.prod_description{
+	width: 50%;
+}
+
+.prod_description h2{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+	margin-bottom: 20px;
+}
+
+.prod_description p{
+font-weight: 400;
+font-size: 18px;
+line-height: 120%;
+margin-bottom: 15px;
+    height: 151px;
+    overflow: hidden;
+
+}
+
+.price_block{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.price_block span{
+	margin: 0px 10px;
+}
+
+.prod_img{
+	width: 50%;
+}
+.product-view{
+    background-color: #FFF3D3;
+}
+
+.product-view p{
+    margin: 36px 200px 36px 0px
+}
+
+.product-view-inner{
+    padding-top: 50px;
+    display: flex;
+    gap: 3%;
+}
+.product-view h1{
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+.product-view h2{
+    padding: 20px 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.product-view-img{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-view-description{
+
+}
+
+.find-more{
+    padding: 92px 0px;
+    display: flex;
+    align-items: center;
+}
+.find-more_item{
+    width: 33.33%;
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.find-more_item div{
+    margin: 10px 0px;
+}
+
+.re_btn{
+    padding: 0px 30px;
+    margin-left: 50px;
+}
+
+.re-bin-counter{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about_h1{
+    margin: 54px 0px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.about_images{
+
+}
+
+.about_inner1{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.about_inner1-text p,.about_inner1-text h2
+{
+    font-size: 23px;
+    margin: 20px 0px;
+}
+.about_inner1-text h2{
+    font-weight: bold;
+}
+
+.about_inner1-text{
+    width: 50%;
+}
+
+
+.about_inner2{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    padding: 50px 0px;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 3px solid #60432c;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #780e0e;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #780e0e;
+    border-color: #780e0e;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgb(96, 67, 44);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #60432c;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: #780e0e;
+    background-color: #780e0e;
+    background-image: url("../img/icon60/pngegg (1) 2.png");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
+
+.about_images{
+    display: flex;
+    align-items: flex-end;
+    gap: 5%;
+}
+
+.partners{
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 23px;
+}
+
+.partners p{
+    margin: 11px ;
+}
+
+.login-page{
+    background-color: #FFF3D3;
+    font-size: 20px;
+    padding-top: 30px;
+    color: #442E23;
+}
+
+.login-page h1{
+    font-size: 22px;
+    margin: 15px 0px;
+}
+
+input {
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.2em 0.4em;
+    background-color: #fff;
+    border: 3px solid #E28343;
+    border-radius: 15px;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+input:focus {
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
+    outline: 3px solid transparent;
+}
+
+input:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+}
+
+input[type=file] {
+    font-size: 0.9em;
+    padding-top: 0.35rem;
+}
+
+textarea.input {
+    resize: vertical;
+}
+
+input[readonly] {
+    border-style: dotted;
+    cursor: not-allowed;
+    color: #777;
+}
+
+input[disabled] {
+    --input-border: #60432c;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+label {
+    font-weight: 800;
+    line-height: 1;
+}
+.form-field label {
+    margin: 15px 0px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-check{
+    margin: 15px 0px;
+}
+
+.btn-primary{
+    padding: 5px 30px;
+}
+
+.login-page-inner{
+    padding: 0px 250px 100px 250px;
+}
+
+.invalid-feedback{
+    color: red;
+}
+
+.email-choco{
+    background-image: url("/css/emailchoco.png");
+    background-size: 923px 499px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px ;
+    gap: 5%;
+}
+
+.email-choco input{
+    padding-right: 100px;
+}
+.email-choco button{
+    padding: 3px 20px
+}
+
+.delivery-inner{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    padding: 40px 0px;
+}
+
+.re-bin-products{
+
+}
+
+.about_inner-text{
+    width: 50%;
+    font-size: 23px;
+}
+
+.about_inner-text div{
+    margin: 46px 0px;
+}
+
+.about_inner-text p{
+    margin: 49px 0px;
+}
+
+.about_inner-images{
+    width: 50%;
+}
+
+.about_inner-images img{
+    max-width: 573px;
+    margin-bottom: 30px;
+}
+
