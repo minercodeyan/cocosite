@@ -5,9 +5,9 @@
         <div class="container">
             <div class="preview__inner">
                 <div class="main_info">
-                    <h1>ШОКОЛАД РУЧНОЙ РАБОТЫ </h1>
+                    <h1>СЛАДОСТИ РУЧНОЙ РАБОТЫ </h1>
                     <ul>
-                        <li><img width="40" src="{{asset('img/icon60/pngegg 1.png')}}"><span>Лучшее какао из Южной Америки</span>
+                        <li><img width="40" src="{{asset('img/icon60/pngegg 1.png')}}"><span>Лучшее какао из <b>Южной Америки</b></span>
                         </li>
                         <li><img width="40" src="{{asset('img/icon60/pngegg 1.png')}}"><span>Современной производство в
                                 центре<br><b>Минска</b></span></li>
@@ -16,28 +16,32 @@
                                 компанией</b></span></li>
                     </ul>
                     <a class="btn main_btn" href="/products">
-                        ВЫБРАТЬ ШОКОЛАД ></i>
+                        ВЫБРАТЬ СЛАДОСТЬ</i>
                     </a>
                 </div>
 
                 <div class="img_main">
-                    <img src="{{asset('img/pngwing 1.png')}}" width="601"/>
+                    <img src="{{asset('img/pngwing 9.png')}}" width="601"/>
                 </div>
             </div>
             <div class="description">
                 <div class="description_inner">
+                    <a href="/products">
                     <div class="picture">
-                        <img src="{{asset('img/pngwing 7.png')}}"/>
+                        <img src="{{asset('img/pngwing 10.png')}}"/>
                         <div>
-                            Готовые изделия
+                          Печенье
                         </div>
                     </div>
+                    </a>
+                    <a href="/products">
                     <div class="picture">
                         <img src="{{asset('img/pngwing 8.png')}}"/>
                         <div>
                             Шоколад на заказ
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="description_cards">
                     <div class="description_card">Продукция соостветсвует гост 19792-2017. Обязательная проверка каждой
@@ -85,7 +89,7 @@
                 <div class="owl-carousel owl-theme">
                     @foreach($comments as $comment)
                         <div class="item">
-                            <div class="comment_logo"><img/>
+                            <div class="comment_logo"><img src="{{asset('/img/1roiEyXKc-c 1.png')}}"/>
                             </div>
                             <p>{{$comment->name}}</p>
                             <div>{{$comment->city}}</div>

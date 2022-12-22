@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500&family=Inter:wght@500&family=Montserrat:wght@700;800&family=Open+Sans&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500&family=Inter:wght@500&family=Montserrat:wght@400;800&family=Open+Sans&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">

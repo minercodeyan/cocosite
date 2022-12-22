@@ -14,7 +14,9 @@
                     <p>{{$product->description}}</p>
                     <div><b id="prise">{{$product->price}}</b> p
                     <button id="btn" class="btn re_btn">В корзину</button>
-                        <input type="hidden" value="{{$product->id}}">
+                        <input type="hidden" id="id" value="{{$product->id}}">
+                        <input type="hidden" id="title2" value="{{$product->title}}">
+                        <input type="hidden" id="price" value="{{$product->price}}">
                     </div>
                 </div>
             </div>
@@ -41,7 +43,7 @@
         this.disabled = true;
         let arr = JSON.parse(localStorage.getItem('productsInBin')||'[]');
 
-        arr.push({id: 1, title: 'lol',price:0.00})
+        arr.push({id: document.getElementById('id').value, title: document.getElementById('title2').value,price:document.getElementById('price').value})
         localStorage.setItem('productsInBin',JSON.stringify(arr));
         let counter = document.getElementById('main-counter');
         counter.innerText = arr.length;

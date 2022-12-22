@@ -21,13 +21,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 body {
 	line-height: 1;
-	font-family: 'Anek Latin', sans-serif;
-font-family: 'Inter', sans-serif;
 font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.picture, .description_card {
+    font-family: 'Montserrat', sans-serif;
 }
 ol, ul {
 	list-style: none;
+}
+
+a {
+    text-underline: none;
+    color: black;
 }
 blockquote, q {
 	quotes: none;
@@ -73,7 +79,6 @@ table {
 	box-sizing: border-box;
 	outline: none;
     border-radius: 25px;
-    border: 3px solid #E28343;
 	line-height: 37px;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -86,9 +91,11 @@ table {
 	touch-action: manipulation;
 	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
 }
+.picture {
 
+}
 .btn:hover {
-	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0 #ffd20c;
+	box-shadow: 0 5px 5px 0  #780e0e, 0 5px 5px 0 #780e0e;
 }
 .btn:active {
 	background-color: #efefef !important;
@@ -145,7 +152,6 @@ table {
 
 .header{
     background-color: #FFF3D3;
-    font-family: Work Sans;
 font-size: 16px;
 font-weight: 400;
 line-height: 18px;
@@ -245,7 +251,7 @@ a{
 
 .info_inner h2 ,.comments_inner h2, .contacts_inner h2{
    font-size: 35px;
-   font-weight: 700;
+   font-weight: 400;
    color: #442E23;
 }
 
@@ -333,12 +339,22 @@ text-align: center;
 }
 
 .picture{
+    max-height: 400px;
 width: 420px;
 border: #F20E6F solid 10px;
 /* Caramel */
 margin: 0px 47px;
 background: #E28343;
 border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.description_card-first:after {
+    content: url(../images/uploads/smudges-removebg.png);
+}
+.picture img {
+    max-height: 370px;
 }
 
 .description_inner{
@@ -440,7 +456,7 @@ border-radius: 25px;
 .submit::before{
     display: inline-block;
     content: '\2713';
-    font-weight: bold;
+    font-weight: 400;
     font-size: 25px;
 }
 .prod_img{
@@ -507,7 +523,7 @@ border-radius: 25px;
 }
 
 .prod_description h2{
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     line-height: 23px;
 	margin-bottom: 20px;
@@ -582,7 +598,7 @@ margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     color: black;
 }
@@ -599,7 +615,7 @@ margin-bottom: 15px;
 .re-bin-counter{
     position: absolute;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
 }
 
@@ -625,7 +641,7 @@ margin-bottom: 15px;
     margin: 20px 0px;
 }
 .about_inner1-text h2{
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .about_inner1-text{
@@ -855,3 +871,62 @@ label {
     margin-bottom: 30px;
 }
 
+.re-bin-products{
+    margin: 0px 100px 0px 300px;
+    padding: 70px 0px;
+    font-size: 20px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.re-bin-summary{
+    margin: 20px 0px;
+    border-top: #6a1c12 solid 5px;
+}
+.little_btn{
+    padding: 10px 25px;
+    margin: 0px 20px;
+}
+
+.summ{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.summ div span{
+    font-size: 25px;
+}
+
+.summary-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.minis,.plus{
+    border: 5px solid #E28343;
+    border-radius: 15px;
+    padding: 0px 10px;
+}
+
+.num{
+    background: white;
+    padding: 0px 10px;
+}
+
+.re-bin-product{
+    margin-bottom: 46px;
+}
+
+.re-bin-product .main{
+    margin-bottom: 20px;
+}
+
+.in-me{
+    font-size: 23px;
+    font-weight: 700;
+}
