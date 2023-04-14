@@ -4,7 +4,6 @@
 
     <div class="preview">
         <div class="container">
-            <div class="breadcumbs">Главная - Контакты</div>
             <h1 class="about_h1">Контакты</h1>
             <div class="about_inner1">
                 <div class="about_inner-text">
@@ -23,7 +22,7 @@
                     </p>
                 </div>
                 <div class="about_inner-images">
-                    <img src="{{asset('img/c1.png')}}">
+                    <img src="{{asset('img/с1.png')}}">
                     <img src="{{asset('img/c2.png')}}">
                 </div>
             </div>

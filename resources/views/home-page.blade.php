@@ -1,6 +1,17 @@
 @extends('main-layout')
 
 @section('content')
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><div>slider1</div></div>
+            <div class="swiper-slide"><div>slider1</div></div>
+            <div class="swiper-slide"><div>slider1</div></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
     <div class="preview">
         <div class="container">
             <div class="preview__inner">
@@ -82,24 +93,6 @@
             </div>
         </div>
     </div>
-    <div class="comments">
-        <div class="container">
-            <div class="comments_inner">
-                <h2>ОТЗЫВЫ</h2>
-                <div class="owl-carousel owl-theme">
-                    @foreach($comments as $comment)
-                        <div class="item">
-                            <div class="comment_logo"><img src="{{asset('/img/1roiEyXKc-c 1.png')}}"/>
-                            </div>
-                            <p>{{$comment->name}}</p>
-                            <div>{{$comment->city}}</div>
-                            <p>{{$comment->description}}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="contacts">
         <div class="container">
             <div class="contacts_inner">
@@ -129,6 +122,7 @@
 
 @section('scripts')
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         let map;
 
@@ -142,23 +136,15 @@
         window.initMap = initMap;
     </script>
     <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            })
+        let swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
 
     </script>

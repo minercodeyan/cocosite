@@ -27,7 +27,7 @@ font-family: 'Montserrat', sans-serif;
 .picture, .description_card {
     font-family: 'Montserrat', sans-serif;
 }
-ol, ul {
+ol,ul {
 	list-style: none;
 }
 
@@ -145,13 +145,13 @@ table {
 /* main ===============================================================*/
 .container {
     width: 100%;
-    max-width: 1232px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .header{
-    background-color: #FFF3D3;
+    background-color: #ffffff;
 font-size: 16px;
 font-weight: 400;
 line-height: 18px;
@@ -164,7 +164,7 @@ a{
 }
 
 .header a, .footer a{
-    color: black;
+    color: #000000;
 
 }
 
@@ -176,12 +176,12 @@ a{
 
 
 .logo{
-    background-color: brown;
-    width: 150px;
-    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 3px solid black;
 }
 
 .logo a{
@@ -190,10 +190,14 @@ a{
 }
 
 .nav{
-    width: 548px;
     display: flex;
-    margin: 24px 20px 0px 0px;
+    margin: 0px 20px 10px 0px;
+    align-items: flex-end;
     justify-content: space-between;
+}
+
+.nav li{
+    margin-left: 30px;
 }
 
 .re_bin{
@@ -241,7 +245,7 @@ a{
 
 
 .info{
-    background-color: #FFF3D3;
+    background-color: #ffffff;
     padding-top: 148px;
 }
 .info_inner{
@@ -284,13 +288,13 @@ a{
 }
 
 .comments{
-	background-color: #FFF3D3 ;
+	background-color: #ffffff;
 	font-size: 20px;
 	padding-top: 30px;
 }
 
 .contacts{
-	background-color: #FFF3D3 ;
+	background-color: #ffffff;
 	padding-top: 60px;
 }
 
@@ -300,17 +304,34 @@ a{
 }
 
 .footer{
-    background-color: #E28343;
+    font-size: 20px;
+    background-color: #545454;
     padding: 85px 0px;
+    color: white;
+}
+
+.footer ol li{
+    margin: 5px 0px;
+}
+
+.footer ul{
+    list-style: square !important;
+    margin: 20px;
+}
+
+.footer ul li{
+    margin: 5px;
 }
 
 .footer_inner{
     display: flex;
     justify-content: space-between;
+    border-bottom: 3px solid white;
+    padding-bottom: 60px;
 }
 
 .preview{
-    background-color: #FFF3D3;
+    background-color: #ffffff;
 }
 
 .links a{
@@ -326,6 +347,25 @@ a{
 	height: 95px;
 	border: 5px solid #E28343;
 	border-radius: 50px;
+}
+
+.args{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .title{
+    margin-bottom: 10px;
+}
+
+.footer_inner div p{
+    margin: 40px 0px;
+}
+
+
+.args div{
+    margin: 0px 30px
 }
 
 .description{
@@ -403,7 +443,10 @@ border-radius: 25px;
     align-content: center;
     align-items: center;
     justify-content: center;
-	padding: 23px 100px;
+}
+
+.owl-nav{
+    display: none;
 }
 
 .item p {
@@ -614,8 +657,9 @@ margin-bottom: 15px;
 
 .re-bin-counter{
     position: absolute;
-    color: white;
     font-weight: 400;
+    top: 110px;
+    right: 140px;
     font-size: 20px;
 }
 
@@ -929,4 +973,43 @@ label {
 .in-me{
     font-size: 23px;
     font-weight: 700;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    height: 600px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide div {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    right:10px;
+    font-weight: bold;
+    padding: 30px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
+
+.swiper-pagination-horizontal{
+    display: none; !important;
 }
