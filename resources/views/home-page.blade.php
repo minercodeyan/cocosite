@@ -1,59 +1,81 @@
 @extends('main-layout')
 
 @section('content')
+    <div class="container">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><div>slider1</div></div>
-            <div class="swiper-slide"><div>slider1</div></div>
-            <div class="swiper-slide"><div>slider1</div></div>
+            <div class="swiper-slide">
+                <div class="slide1">
+                    <div>
+                        <div class="slide1-title">
+                            <h1>Выездное<br> обслуживание<br> вашего<br> мероприятия </h1>
+
+                                <p>Хотите заказать кейтеринг недорого?<br>
+                                Оставте ваши контактные данные и мы</br>
+                                    расскажем все подробно</br>
+                                <a href="/lol" class="btn">Оставить<br>контакты</a>
+                                </p>
+                        </div><img src="{{asset('img/main.jpg')}}" alt="main">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide4">
+                    <div>
+                        <div class="slide4-title">
+                            <h1>Запишитесь на персональную<br>
+                                консультацию по подбору<br>
+                                варианта обслуживания вашего<br>
+                                мероприятия
+                            </h1>
+
+                            <p>Согласуйте со специалистом дату, время и удобный для<br>
+                                вас способ проведения консультации.
+                            </p>
+                        </div>
+                        <form class="form">
+                            <input type="text" name="lol" placeholder="введите имя">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" name="phone">
+                            <button class="btn-2" type="submit">Записаться на консультанию</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide5">
+                    <div>
+                        <img src="{{asset('img/about.png')}}" alt="main">
+                        <div class="slide1-title">
+                            <h1>О нас</h1>
+
+                            <p>BigUp - профессианальный ресторан выездного обслуживания.<br>
+
+                                Поможем организовать гастрономическое сопровождение вашего
+                                мероприятия от свадьбы до бизнес встречи под ключ.<br>
+                                Работаем с любыми бюджетами!
+                                Учитываем все пожелания и условия мероприятия.<br>
+
+                                За годы своей деятельности наша компания показала себя, как
+                                надёжный кейтеринг-партнёр для крупного бизнеса и ответственный
+                                подрядчик на частных небольших мероприятиях. Обладая большим
+                                опытом в реализации нестандартных решений, специалисты BigAp
+                                посоветуют лучшее для вашего мероприятия.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-
+    </div>
     <div class="preview">
         <div class="container">
-            <div class="preview__inner">
-                <div class="main_info">
-                    <h1>СЛАДОСТИ РУЧНОЙ РАБОТЫ </h1>
-                    <ul>
-                        <li><img width="40" src="{{asset('img/icon60/pngegg 1.png')}}"><span>Лучшее какао из <b>Южной Америки</b></span>
-                        </li>
-                        <li><img width="40" src="{{asset('img/icon60/pngegg 1.png')}}"><span>Современной производство в
-                                центре<br><b>Минска</b></span></li>
-                        <li><img width="40"
-                                 src="{{asset('img/icon60/pngegg 1.png')}}"><span>Отправка по Беларуси и СНГ<br><b>транспортной
-                                компанией</b></span></li>
-                    </ul>
-                    <a class="btn main_btn" href="/products">
-                        ВЫБРАТЬ СЛАДОСТЬ</i>
-                    </a>
-                </div>
-
-                <div class="img_main">
-                    <img src="{{asset('img/pngwing 9.png')}}" width="601"/>
-                </div>
-            </div>
             <div class="description">
-                <div class="description_inner">
-                    <a href="/products">
-                    <div class="picture">
-                        <img src="{{asset('img/pngwing 10.png')}}"/>
-                        <div>
-                          Печенье
-                        </div>
-                    </div>
-                    </a>
-                    <a href="/products">
-                    <div class="picture">
-                        <img src="{{asset('img/pngwing 8.png')}}"/>
-                        <div>
-                            Шоколад на заказ
-                        </div>
-                    </div>
-                    </a>
-                </div>
+                <h2>Наши приемущества</h2>
                 <div class="description_cards">
                     <div class="description_card">Продукция соостветсвует гост 19792-2017. Обязательная проверка каждой
                         партии
@@ -62,57 +84,6 @@
                         Минск и г. Борисов
                     </div>
                     <div class="description_card">Эклологически чистая продукция, привезенная из Южной Америки и Конго
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="info">
-        <div class="container">
-            <div class="info_inner">
-                <h2>О НАС</h2>
-                <div class="info_description">
-                    <div class="info_imgs">
-                        <img width="338" src="{{asset('img/shokolad1 1.png')}}"/>
-                        <img width="338" src="{{asset('img/shokolad1 1.png')}}"/>
-                    </div>
-                    <div class="info_text">
-                        <h3>Lorem ipsum dolor sit amet. Hic consequatur internos vel maxime sint At dicta dolor in
-                            dolores nihil.</h3>
-                        <p> In accusamus ducimus et quia nemo eum consequatur dolores quos inventore et quasi porro ut
-                            quia necessitatibus.
-
-                            Est laudantium unde aut alias saepe cum molestiae consequatur et nihil rerum sed dolor
-                            maiores est dignissimos consequatur. Eum nulla quis hic numquam expedita ad obcaecati
-                            mollitia ut harum facere non omnis quis. Et autem eaque ut minima ex officiis iste ut
-                            delectus velit ut totam rerum aut reiciendis quia vel architecto consequuntur. Aut alias
-                            similique ad tempora nihil sed quaerat provident.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contacts">
-        <div class="container">
-            <div class="contacts_inner">
-                <h2>КОНТАКТЫ</h2>
-                <div class="map_block">
-                    <div id="map"></div>
-                    <div>
-                        <p>Часы работы 9.00-21.00</p>
-                        <p>Телефон:<br>
-                            +375 44 785 12 23</p>
-                        <p>Почта:<br>
-                            example@email.com</p>
-                        <button class="btn">Обратный звонок</button>
-                    </div>
-                    <div>
-                        <p>Адреса:</p>
-                        <p> г. Минск,<br>
-                            улица Гикало, 5</p>
-                        <p> г. Борисов<br>
-                            улица Ленина, 48</p>
                     </div>
                 </div>
             </div>

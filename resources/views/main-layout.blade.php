@@ -37,7 +37,6 @@
             </ul>
             <a href="/re-bin" style="margin-top: 20px">
                 <img src="{{ asset('img/shop-icon.png') }}" width="50" />
-                <div class="re-bin-counter" id="main-counter">0</div>
             </a>
         </nav>
     </div>

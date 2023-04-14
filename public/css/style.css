@@ -78,13 +78,11 @@ table {
 	display: inline-block;
 	box-sizing: border-box;
 	outline: none;
-    border-radius: 25px;
-	line-height: 37px;
+    border: 3px solid black;
 	text-transform: uppercase;
 	font-weight: normal;
 	text-decoration: none;
-	color: #FFF3D3;
-	background-color: #774125;
+	color: black;
 	cursor: pointer;
 	user-select: none;
 	appearance: none;
@@ -95,7 +93,7 @@ table {
 
 }
 .btn:hover {
-	box-shadow: 0 5px 5px 0  #780e0e, 0 5px 5px 0 #780e0e;
+	box-shadow: 0 5px 5px 0 #f1efef, 0 5px 5px 0 #000000;
 }
 .btn:active {
 	background-color: #efefef !important;
@@ -110,7 +108,7 @@ table {
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 0 24px;
-	margin: 0 15px 15px 0;
+	margin: 40px 40px 30px 0;
 	outline: none;
 	border: none;
 	border-radius: 3px;
@@ -121,7 +119,7 @@ table {
 	font-weight: normal;
 	text-decoration: none;
 	color: #fff;
-	background-color: #05cd51;
+	background-color: #4f4f4f;
 	cursor: pointer;
 	user-select: none;
 	appearance: none;
@@ -407,7 +405,7 @@ border-radius: 25px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	color: #FFF3D3;
+	color: #000000;
 }
 
 .map_block{
@@ -433,8 +431,12 @@ letter-spacing: 0em;
 .description_card{
 width: 270px;
 padding: 30px 15px;
-background: #774125;
+background: #858585;
 border-radius: 25px;
+}
+
+.description h2{
+    font-size: 50px;
 }
 
 .item{
@@ -796,8 +798,8 @@ input {
     font-family: inherit;
     padding: 0.2em 0.4em;
     background-color: #fff;
-    border: 3px solid #E28343;
-    border-radius: 15px;
+    border: 2px solid #8a8a8a;
+    border-radius: 5px;
     transition: 180ms box-shadow ease-in-out;
 }
 
@@ -994,7 +996,7 @@ label {
 .swiper-slide div {
     display: block;
     width: 100%;
-    height: 500px;
+    height: 590px;
     object-fit: cover;
 }
 
@@ -1012,4 +1014,78 @@ label {
 
 .swiper-pagination-horizontal{
     display: none; !important;
+}
+
+.slide1 div{
+    background: #f1f1f1;
+    display: flex; !important;
+}
+
+.slide4 div{
+    display: flex; !important;
+}
+
+.slide4-title{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+}
+
+.slide4 .form{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    justify-content: end;
+}
+
+.slide4 .form input{
+    margin: 20px 40px 20px 0px;
+}
+
+.slide4 label{
+    text-align: start;
+    font-weight: 200;
+}
+
+
+
+.slide4-title h1{
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.slide5 div{
+    display: flex; !important;
+    line-height: 20px;
+}
+.slide5 img{
+    margin-top: 20px;
+}
+
+.slide1-title{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin: 70px 100px;
+}
+
+.slide1-title h1{
+    font-size: 50px;
+    line-height: 70px;
+}
+
+.slide1-title p{
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.slide4-title p{
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.slide1-title .btn{
+    padding: 10px 65px;
+    margin: 10px 0px;;
 }
