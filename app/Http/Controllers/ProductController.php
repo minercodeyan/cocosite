@@ -41,7 +41,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($categorySlug,$id)
     {
         $product = Product::findOrFail($id);
         $sameProducts = Product::where('category_id','=',$product->category_id)->where('id','!=',$product->id)->take(3)->get();

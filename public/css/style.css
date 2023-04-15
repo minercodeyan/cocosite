@@ -524,47 +524,18 @@ border-radius: 25px;
     justify-content: center;
 }
 
-.product_item:nth-child(2n)
-{
-	flex-direction: row-reverse;
-}
-
-
-.product_item:nth-child(2n) p
-{
-	text-align: right;
-	margin-left: 94px;
-}
-
-.product_item:nth-child(2n+1) p
-{
-	text-align: left;
-	margin-right: 94px;
-}
-
-
-.product_item:nth-child(2n) h2{
-	text-align: right;
-}
-
-.product_item:nth-child(2n) .price_block{
-
-	flex-direction: row-reverse;
-}
-
 .breadcumbs{
 	padding-left: 194px;
 }
 
 .product_item{
-	display: flex;
-	margin-top: 80px;
+    width: 20%;
+	margin-top: 40px;
 	gap: 30px;
 }
 
 
 .prod_description{
-	width: 50%;
 }
 
 .prod_description h2{
@@ -724,8 +695,7 @@ margin-bottom: 15px;
     height: 1.3em;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 3px solid #60432c;
-    border-radius: 0.25em;
+    border: 3px solid #000000;
     margin-right: 0.5em;
     background-repeat: no-repeat;
     background-position: center center;
@@ -734,30 +704,29 @@ margin-bottom: 15px;
 
 /* стили при наведении курсора на checkbox */
 .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
-    border-color: #780e0e;
+    border-color: #676767;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
 .custom-checkbox>input:not(:disabled):active+span::before {
-    background-color: #780e0e;
-    border-color: #780e0e;
+    background-color: #757575;
+    border-color: #ffffff;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
 .custom-checkbox>input:focus+span::before {
-    box-shadow: 0 0 0 0.2rem rgb(96, 67, 44);
+    box-shadow: 0 0 0 0.2rem rgb(117, 117, 117);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .custom-checkbox>input:focus:not(:checked)+span::before {
-    border-color: #60432c;
+    border-color: #5e5e5e;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox>input:checked+span::before {
-    border-color: #780e0e;
-    background-color: #780e0e;
-    background-image: url("../img/icon60/pngegg (1) 2.png");
+    border-color: #656565;
+    background-image: url("../img/icon60/pngegg (1) 2 (1).png");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
@@ -782,10 +751,8 @@ margin-bottom: 15px;
 }
 
 .login-page{
-    background-color: #FFF3D3;
     font-size: 20px;
     padding-top: 30px;
-    color: #442E23;
 }
 
 .login-page h1{

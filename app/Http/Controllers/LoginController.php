@@ -3,8 +3,9 @@ namespace App\Http\Controllers;
 
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+    class LoginController extends Controller
 {
     /**
      * Handle an authentication attempt.
@@ -25,11 +26,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect('/profile');
         }
 
         return redirect()->back()->withInput($request->only('email, remember'))->withErrors([
             'auth' => 'Неправильный логин или пароль'
         ]);
     }
+
 }

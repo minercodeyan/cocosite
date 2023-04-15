@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ChocoShop</title>
@@ -30,13 +31,17 @@
                 <p>Хороший кейтеринг</br> для вашего мероприятия</p>
             </div>
             <ul class="nav">
-                <li><a href="/products">Меню</a></li>
+                <li><a href="/catalog">Меню</a></li>
                 <li><a href="/about">Кейтеринг</a></li>
                 <li><a href="/delivery">Фуршет</a></li>
                 <li><a href="/">Кофе-брейк</a></li>
                 <li><a href="/">Фуд-боксы</a></li>
                 <li><a href="/contacts">Контакты</a></li>
-                <li><a href="/contacts">Войти</a></li>
+                @if($user = Auth::user())
+                    <li><a href="/profile">{{$user->name}}</a></li>
+                @else
+                    <li><a href="/login">Войти</a></li>
+                @endif
             </ul>
             <a href="/re-bin" style="margin-top: 20px">
                 <img src="{{ asset('img/shop-icon.png') }}" width="50" />

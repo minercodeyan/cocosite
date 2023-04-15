@@ -1,0 +1,44 @@
+.profile{
+    background-color: #e0e0e0;
+}
+
+
+.profile-inner{
+    display: flex;
+    gap: 5%;
+    padding: 30px 20px 70px 20px;
+}
+
+.profile-inner section{
+    width: 65%;
+}
+
+.profile-inner section .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile-inner section .items .item{
+    background-color: grey;
+    height: 200px;
+    margin-bottom: 50px;
+    width: 30%;
+}
+
+
+.profile-inner aside{
+    width: 30%;
+    border: 3px grey solid;
+    padding: 20px;
+}
+
+.profile-inner aside a{
+    color: white;
+}
+
+.profile-inner aside li{
+    padding: 15px;
+    background-color: #494949;
+    margin: 10px 0px;
+}

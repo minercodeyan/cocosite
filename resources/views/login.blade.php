@@ -4,7 +4,7 @@
     <div class="login-page">
         <div class="container">
             <div class="login-page-inner">
-                <h1>Войти за администратора</h1>
+                <h1>Войти</h1>
                 <form class="form-login" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="form-field">
@@ -39,7 +39,7 @@
                         <button type="submit" class="btn btn-primary">
                             Войти
                         </button>
-
+                        <a style="text-decoration: underline; margin-left: 30px" href="/register">Регистрация</a>
                         @if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}

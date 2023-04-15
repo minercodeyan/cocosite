@@ -3,7 +3,7 @@
 @section('content')
     <div class="product-view">
         <div class="container">
-            <div class="breadcumbs">Главная - Шоколад - Готовые изделия - {{$product->title}}</div>
+            <div class="breadcumbs">Главная - Меню - Готовые изделия - {{$product->title}}</div>
             <div class="product-view-inner">
                 <div class="product-view-img">
                     <img src="{{asset('img/products/Chocolate cookies.png')}}">

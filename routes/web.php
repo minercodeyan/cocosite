@@ -49,5 +49,12 @@ Route::post('/make-application', '\App\Http\Controllers\ClientApplicationsContro
 
 Route::get("catalog",'\App\Http\Controllers\ProductController@catalog');
 
-Route::resource("catalog/{categorySlug}",\App\Http\Controllers\ProductController::class);
+Route::get("catalog/{categorySlug}", '\App\Http\Controllers\ProductController@index');
 
+Route::get("catalog/{categorySlug}/{id}",'\App\Http\Controllers\ProductController@show');
+
+Route::get("profile",'\App\Http\Controllers\ProfileController@index');
+
+Route::get("change-password",'\App\Http\Controllers\ProfileController@changePassword');
+
+Route::post("change-password",'\App\Http\Controllers\ProfileController@changePassword')->name('change-password');
