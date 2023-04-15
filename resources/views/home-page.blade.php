@@ -33,10 +33,12 @@
                                 вас способ проведения консультации.
                             </p>
                         </div>
-                        <form class="form">
-                            <input type="text" name="lol" placeholder="введите имя">
-                            <label for="phone">Номер телефона</label>
-                            <input type="tel" name="phone">
+                        <form class="form" method="POST" action="{{ route('make-application') }}">
+                            @csrf
+                            <input type="text" name="client_name" placeholder="введите имя" required>
+                            <label for="phone" >Номер телефона</label>
+                            <input type="tel" name="client_phone" minlength="5" required>
+                            <input type="hidden" name="app_type" value="0">
                             <button class="btn-2" type="submit">Записаться на консультанию</button>
                         </form>
                     </div>

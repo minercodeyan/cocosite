@@ -4,7 +4,7 @@
 
 <div class="preview">
     <div class="container">
-        <div class="breadcumbs">Главная - Шоколад - Готовые изделия</div>
+        <div class="breadcumbs">Главная > Меню > {{$category->title}}</div>
         <div class="product_inner">
             <div class="product_list">
                 @forelse($products as $product)
@@ -20,29 +20,6 @@
                     <div style="height: 200px; padding-top: 200px; font-weight: bold">НЕТ ПРОДУКТОВ</div>
                 @endforelse
             </div>
-            <aside class="aside">
-                <form id="add-blog-post-form" method="get" action="{{url('/products')}}">
-                    <ul>
-                        @foreach($categories as $category)
-                            <li>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="{{$category->id}}">
-                                    <span>{{$category->title}}</span>
-                                </label>
-                            </li>
-                        @endforeach
-                        <li>
-                            <button type="reset">
-                                <div class="close"></div><div>Очистить</div>
-                            </button>
-                            <button type="submit">
-                                <div class="submit"></div><div>Применить</div>
-                            </button>
-                        </li>
-                    </ul>
-                </form>
-
-            </aside>
         </div>
     </div>
 </div>

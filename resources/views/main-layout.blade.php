@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ChocoShop</title>
 </head>
 
 <body>
+@include('flash-messages')
+
 <div class="header">
     <div class="container">
         <nav class="header_inner">

@@ -44,7 +44,10 @@ Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginCon
 
 Route::post('/login', '\App\Http\Controllers\LoginController@authenticate');
 
+Route::post('/make-application', '\App\Http\Controllers\ClientApplicationsController@makeApp')
+    ->name('make-application');
 
+Route::get("catalog",'\App\Http\Controllers\ProductController@catalog');
 
-Route::resource("products",\App\Http\Controllers\ProductController::class);
+Route::resource("catalog/{categorySlug}",\App\Http\Controllers\ProductController::class);
 

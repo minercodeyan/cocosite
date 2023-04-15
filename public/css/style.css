@@ -519,9 +519,9 @@ border-radius: 25px;
 }
 
 .product_list{
-	padding-left: 194px;
-    padding-bottom: 94px;
-	width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product_item:nth-child(2n)

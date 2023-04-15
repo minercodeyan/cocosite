@@ -7,6 +7,7 @@ use AdminColumnFilter;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use App\Models\ClientApplication;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
@@ -18,13 +19,13 @@ use SleepingOwl\Admin\Form\Buttons\SaveAndCreate;
 use SleepingOwl\Admin\Section;
 
 /**
- * Class Categories
+ * Class ClientApplications
  *
- * @property \App\Models\Category $model
+ * @property \App\Models\ClientApplication $model
  *
  * @see https://sleepingowladmin.ru/#/ru/model_configuration_section
  */
-class Categories extends Section implements Initializable
+class ClientApplications extends Section implements Initializable
 {
     /**
      * @var bool
@@ -46,8 +47,7 @@ class Categories extends Section implements Initializable
      */
     public function initialize()
     {
-        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-lightbulb-o')
-            ->setTitle('Категории');
+        $this->addToNavigation()->setPriority(100)->setIcon('fa fa-lightbulb-o')->setTitle('Заявки клиентов');
     }
 
     /**
@@ -59,18 +59,13 @@ class Categories extends Section implements Initializable
     {
         $columns = [
             AdminColumn::text('id', '#')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::link('title', 'Название', 'created_at')
-                ->setSearchCallback(function($column, $query, $search){
-                    return $query
-                        ->orWhere('title', 'like', '%'.$search.'%')
-                    ;
-                })
-                ->setOrderable(function($query, $direction) {
-                    $query->orderBy('created_at', $direction);
-                })
-            ,
-            AdminColumn::boolean('name', 'On'),
-            AdminColumn::text('created_at', 'Created / updated', 'updated_at')
+            AdminColumn::link('client_name', 'Name', 'created_at'),
+            AdminColumn::text('client_phone', 'Номер клиента'),
+            AdminColumn::custom('application_status', function ($instance) {
+                return '<div style="background:'.ClientApplication::STATUS_COLORS[$instance->application_status].'">'.ClientApplication::STATUSES[$instance->application_status] .'</div>' ;
+            })->setLabel('Статус записи'),
+            AdminColumn::text('application_type', 'Тип записи'),
+            AdminColumn::text('created_at', 'создана / отредактированна', 'updated_at')
                 ->setWidth('160px')
                 ->setOrderable(function($query, $direction) {
                     $query->orderBy('updated_at', $direction);
@@ -88,6 +83,17 @@ class Categories extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary table-hover th-center')
         ;
 
+        $display->setColumnFilters([
+            AdminColumnFilter::select()
+                ->setModelForOptions(ClientApplication::class, 'name')
+                ->setLoadOptionsQueryPreparer(function($element, $query) {
+                    return $query;
+                })
+                ->setDisplay('name')
+                ->setColumnName('name')
+                ->setPlaceholder('All names')
+            ,
+        ]);
         $display->getColumnFilters()->setPlacement('card.heading');
 
         return $display;
@@ -103,18 +109,28 @@ class Categories extends Section implements Initializable
     {
         $form = AdminForm::card()->addBody([
             AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('title', 'Имя')
-                    ->required(),
-                AdminFormElement::text('description', 'Описание')
-            ]),
-
+                AdminFormElement::text('client_name', 'Имя клиента')
+                    ->required()
+                ,
+                AdminFormElement::html('<hr>'),
+                AdminFormElement::select('application_status')
+                    ->setOptions(ClientApplication::STATUSES)->required()->setSortable(false),
+                AdminFormElement::datetime('updated_at')
+                    ->setVisible(true)
+                    ->setReadonly(false)
+                ,
+                AdminFormElement::html('last AdminFormElement without comma')
+            ], 'col-xs-12 col-sm-6 col-md-4 col-lg-4')->addColumn([
+                AdminFormElement::text('id', 'ID')->setReadonly(true),
+                AdminFormElement::html('last AdminFormElement without comma')
+            ], 'col-xs-12 col-sm-6 col-md-8 col-lg-8'),
         ]);
 
         $form->getButtons()->setButtons([
-            'сохранить'  => new Save(),
-            'сохранить и закрыть'  => new SaveAndClose(),
-            'сохранить и создать'  => new SaveAndCreate(),
-            'назад'  => (new Cancel()),
+            'save'  => new Save(),
+            'save_and_close'  => new SaveAndClose(),
+            'save_and_create'  => new SaveAndCreate(),
+            'cancel'  => (new Cancel()),
         ]);
 
         return $form;
@@ -125,7 +141,7 @@ class Categories extends Section implements Initializable
      */
     public function onCreate($payload = [])
     {
-        return $this->onEdit(null, $payload);
+        return null;
     }
 
     /**

@@ -18,10 +18,8 @@ class CreateClientsApplicationsTable extends Migration
             $table->string('client_name');
             $table->string('client_phone');
             $table->string('client_comment')->nullable();
-            $table->string('application_status');
-            $table->unsignedBigInteger('applications_type_id')->nullable();
-            $table->foreign('applications_type_id')
-                ->references('id')->on('applications_type');
+            $table->tinyInteger('application_status');
+            $table->tinyInteger('application_type');
             $table->timestamps();
         });
     }

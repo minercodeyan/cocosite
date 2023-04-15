@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\ClientApplication;
 use App\Models\MainSlider;
 use App\Models\Product;
 use App\Models\User;
@@ -18,7 +19,8 @@ class AdminSectionsServiceProvider extends ServiceProvider
         User::class => 'App\Http\Sections\Users',
         Product::class =>'App\Http\Sections\Products',
         Category::class =>'App\Http\Sections\Categories',
-        MainSlider::class =>'App\Http\Sections\SliderItems'
+        MainSlider::class =>'App\Http\Sections\SliderItems',
+        ClientApplication::class => 'App\Http\Sections\ClientApplications'
     ];
 
     /**

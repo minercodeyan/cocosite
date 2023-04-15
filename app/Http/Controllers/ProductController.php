@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ProductController extends Controller
 {
@@ -15,11 +16,18 @@ class ProductController extends Controller
      */
 
 
-    public function index(Request $request)
+    public function index(Request $request,$categorySlug)
     {
+
+        if(!$category = Category::where('slug',$categorySlug)->first()){
+            throw new NotFoundHttpException();
+        }
+
+
+
         if(!$request->all()){
             return view('products-page',
-                ['products'=>Product::all(), 'categories'=>Category::all()]
+                ['products'=>Product::where('category_id',$category->id)->get(), 'category'=>$category]
             );
         }
         return view('products-page',
@@ -41,6 +49,12 @@ class ProductController extends Controller
         return view('product-page',
             ['product'=> $product, 'sameProducts'=>$sameProducts
             ]);
+    }
+
+    public function catalog()
+    {
+        return view('catalog',
+        ['categories'=> Category::all()]);
     }
 
 }
