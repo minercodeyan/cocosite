@@ -37,7 +37,7 @@
                             @csrf
                             <input type="text" name="client_name" placeholder="введите имя" required>
                             <label for="phone" >Номер телефона</label>
-                            <input type="tel" name="client_phone" minlength="5" required>
+                            <input type="tel" value="+375 ( )" name="client_phone" minlength="5" required>
                             <input type="hidden" name="app_type" value="0">
                             <button class="btn-2" type="submit">Записаться на консультанию</button>
                         </form>
@@ -79,15 +79,52 @@
             <div class="description">
                 <h2>Наши приемущества</h2>
                 <div class="description_cards">
-                    <div class="description_card">Продукция соостветсвует гост 19792-2017. Обязательная проверка каждой
-                        партии
+                    <div class="description_card">
+                        <h3>удобство</h3>
+                        <p>Есть возможность
+                        самостоятельно собрать и
+                        оформить заказ online.
+                            Понятная и прозрачная смета</p>
                     </div>
-                    <div class="description_card">Доставка от трех дней по РБ. Доставка курьером или самовывоз в г.
-                        Минск и г. Борисов
+                    <div class="description_card"><h3>ассортимент</h3>
+                        <p>Более 2 000 блюд, подходящих
+                            для свадеб, юбилеев, детских
+                            праздников, кофе-пауз,
+                            событий в офисе, знаковых дат
+                            и вечеринок</p>
                     </div>
-                    <div class="description_card">Эклологически чистая продукция, привезенная из Южной Америки и Конго
+                    <div class="description_card"><h3>упаковка</h3>
+                        <p>Всю еду мы упаковываем в
+                            специальные боксы с удобной
+                            съемной крышкой, которые не
+                            повреждают внешний вид
+                            закусок</p>
+                    </div>
+                    <div class="description_card"><h3>качество</h3>
+                        <p>Все блюда готовятся из
+                            свежайших продуктов, которые
+                            ежедневно проходят контроль
+                            качества</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="preview">
+        <div class="container">
+            <div class="description">
+                <h2>Оставьте заявку</h2>
+                <form class="form-comment" method="POST" action="{{ route('make-application') }}">
+                    @csrf
+                    <p>Ваш личный помощник от компании BigUp поможет с подбором формата обслуживания
+                        мероприятия, посоветует топовые позиции меню и просчитает итоговую стоимость.</p>
+                    <div>
+                        <input type="text" name="client_name" placeholder="введите имя" required>
+                        <input type="text" name="client_name" placeholder="введите имя" required>
+                    </div>
+                    <textarea  placeholder="введите комментарий..." rows="16"  name="client_comment"></textarea>
+                    <button class="btn-2" type="submit">Отправить</button>
+                </form>
             </div>
         </div>
     </div>

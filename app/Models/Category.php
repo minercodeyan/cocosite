@@ -12,6 +12,11 @@ class Category extends Model
 
     use HasFactory;
 
+    public function getImageAttribute($value)
+    {
+        return $value ? asset($value) : asset('/img/sategory-page.PNG');
+    }
+
     public static function boot() {
         parent::boot();
 

@@ -69,7 +69,7 @@ table {
 }
 
 .prod_btn{
-	padding: 0px 44px;
+	padding: 14px 44px;
 	border: #E28343 solid 3px;
 	font-size: 13px;
 }
@@ -368,7 +368,6 @@ a{
 
 .description{
 	padding-top: 140px;
-	font-family: Work Sans;
 font-size: 20px;
 font-weight: 400;
 line-height: 23px;
@@ -400,11 +399,37 @@ border-radius: 25px;
 	justify-content: center;
 }
 
+.form-comment{
+    margin: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-comment div{
+    margin-top: 30px;
+    display: flex;
+    gap: 3%;
+}
+
+.form-comment div input{
+    background-color: #f1f1f1;
+    border-radius: 0px;
+    width: 47%;
+    justify-content: center;
+}
+
+.form-comment textarea{
+    margin-top: 30px;
+    width: 96%;
+    background-color: #f1f1f1;
+}
+
 .description_cards{
-	margin-top: 100px;
+	margin-top: 120px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+    padding-bottom: 100px;
 	color: #000000;
 }
 
@@ -429,10 +454,11 @@ letter-spacing: 0em;
 }
 
 .description_card{
-width: 270px;
-padding: 30px 15px;
-background: #858585;
-border-radius: 25px;
+ width: 270px;
+ padding: 30px 15px;
+ background: #f1f1f1;
+
+ border-radius: 25px;
 }
 
 .description h2{
@@ -507,13 +533,12 @@ border-radius: 25px;
 .prod_img{
     height: 280px;
     width: 422px;
-    border: 5px solid brown;
     border-radius: 10px;
 }
 
 .product_item_img{
-    width: 100%;
-    height: 100%;
+    width: 193px;
+    height: 200px;
     object-fit: cover;
 
 }
@@ -529,8 +554,8 @@ border-radius: 25px;
 }
 
 .product_item{
-    width: 20%;
-	margin-top: 40px;
+    width: 16%;
+    margin: 40px 2% 20px 2%;
 	gap: 30px;
 }
 
@@ -539,7 +564,7 @@ border-radius: 25px;
 }
 
 .prod_description h2{
-    font-weight: 400;
+    font-weight: 700;
     font-size: 20px;
     line-height: 23px;
 	margin-bottom: 20px;
@@ -550,7 +575,7 @@ font-weight: 400;
 font-size: 18px;
 line-height: 120%;
 margin-bottom: 15px;
-    height: 151px;
+    height: 70px;
     overflow: hidden;
 
 }
@@ -921,7 +946,7 @@ label {
 }
 
 .minis,.plus{
-    border: 5px solid #E28343;
+    border: 5px solid #a6a6a6;
     border-radius: 15px;
     padding: 0px 10px;
 }

@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="summary-buttons">
-                        <a class="btn little_btn" href="{{url('/products')}}">
+                        <a class="btn little_btn" href="{{url('/catalog')}}">
                             Выбрать еще
                         </a>
                         <a class="btn little_btn" href="https://www.paypal.com/ru/home" target="_blank">
