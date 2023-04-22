@@ -161,9 +161,12 @@ a{
 	text-decoration: none;
 }
 
-.header a, .footer a{
+.header a{
     color: #000000;
+}
 
+.footer a{
+    color: white;
 }
 
 .header_inner{
@@ -196,6 +199,10 @@ a{
 
 .nav li{
     margin-left: 30px;
+}
+
+.nav li a:hover{
+    text-decoration: underline;
 }
 
 .re_bin{
@@ -353,6 +360,10 @@ a{
     justify-content: space-between;
 }
 
+.footer a{
+    color: white;
+}
+
 .footer .title{
     margin-bottom: 10px;
 }
@@ -408,6 +419,7 @@ border-radius: 25px;
 .form-comment div{
     margin-top: 30px;
     display: flex;
+    justify-content: center;
     gap: 3%;
 }
 
@@ -419,9 +431,16 @@ border-radius: 25px;
 }
 
 .form-comment textarea{
+    border: 2px solid grey;
     margin-top: 30px;
-    width: 96%;
+    width: 100%;
     background-color: #f1f1f1;
+}
+
+.form-comment .btn{
+    margin: 20px;
+    padding: 16px;
+    width: 20%;
 }
 
 .description_cards{
@@ -537,7 +556,6 @@ letter-spacing: 0em;
 }
 
 .product_item_img{
-    width: 193px;
     height: 200px;
     object-fit: cover;
 
@@ -988,7 +1006,6 @@ label {
 .swiper-slide div {
     display: block;
     width: 100%;
-    height: 590px;
     object-fit: cover;
 }
 
@@ -1010,6 +1027,10 @@ label {
 
 .slide1 div{
     background: #f1f1f1;
+    display: flex; !important;
+}
+
+.slide6 div{
     display: flex; !important;
 }
 

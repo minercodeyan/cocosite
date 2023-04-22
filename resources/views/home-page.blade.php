@@ -20,6 +20,28 @@
                 </div>
             </div>
             <div class="swiper-slide">
+                <div class="slide6">
+                    <div>
+                        <div class="slide4-title">
+                            <h1>Направления и виды деятельности</h1>
+                            <p>Услуги выездного ресторана с</br>
+                                обслуживанием гостей</p>
+                            <p>Организация фуршетов на любое</br>
+                                количество человек</p>
+                            <p>Организация корпоративных</br>
+
+                                мероприятий, презентаций и бизнес-</br>
+                                встреч</p>
+                            <p>Аренда посуды, мебели, текстиля,</br>
+                                оборудования</p>
+                            <p>Доставка фуд-боксов</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
                 <div class="slide4">
                     <div>
                         <div class="slide4-title">
@@ -122,14 +144,15 @@
                         <input type="text" name="client_name" placeholder="введите имя" required>
                         <input type="text" name="client_name" placeholder="введите имя" required>
                     </div>
-                    <textarea  placeholder="введите комментарий..." rows="16"  name="client_comment"></textarea>
-                    <button class="btn-2" type="submit">Отправить</button>
+                    <div>
+                        <textarea  placeholder="введите комментарий..." rows="16"  name="client_comment"></textarea>
+                    </div>
+                    <div><button class="btn" type="submit">Отправить</button></div>
                 </form>
             </div>
         </div>
     </div>
 @endsection
-
 @section('scripts')
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
