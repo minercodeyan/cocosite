@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    @yield('local-style')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ChocoShop</title>
@@ -32,10 +33,10 @@
             </div>
             <ul class="nav">
                 <li><a href="/catalog">Меню</a></li>
-                <li><a href="/about">Кейтеринг</a></li>
-                <li><a href="/delivery">Фуршет</a></li>
-                <li><a href="/">Кофе-брейк</a></li>
-                <li><a href="/">Фуд-боксы</a></li>
+                <li><a href="/catering">Кейтеринг</a></li>
+                <li><a href="/food-shet">Фуршет</a></li>
+                <li><a href="/coffe">Кофе-брейк</a></li>
+                <li><a href="/food-box">Фуд-боксы</a></li>
                 <li><a href="/contacts">Контакты</a></li>
                 @if($user = Auth::user())
                     <li><a href="/profile">{{$user->name}}</a></li>
@@ -90,6 +91,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="

@@ -1,5 +1,22 @@
 @extends('main-layout')
+@section('local-style')
+    <style>
+        .swiper-slide {
+            height: 600px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .swiper-slide div {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="container">
     <div class="swiper mySwiper">
@@ -155,7 +172,6 @@
 @endsection
 @section('scripts')
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         let map;
 

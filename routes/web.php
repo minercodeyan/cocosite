@@ -36,8 +36,32 @@ Route::get('/re-bin', function () {
     return view('re-bin');
 });
 
-Route::get('/about', function () {
-    return view('about-page');
+Route::get('/catering', function () {
+
+    return view('catering',
+        ['cateringItems'=>\App\Models\MainSlider::
+        where('category',\App\Models\MainSlider::CATERING)->get()]);
+});
+
+Route::get('/coffe', function () {
+
+    return view('coffe',
+        ['cateringItems'=>\App\Models\MainSlider::
+        where('category',\App\Models\MainSlider::CATERING)->get()]);
+});
+
+Route::get('/food-box', function () {
+
+    return view('food-box',
+        ['cateringItems'=>\App\Models\MainSlider::
+        where('category',\App\Models\MainSlider::CATERING)->get()]);
+});
+
+Route::get('/food-shet', function () {
+
+    return view('food-shet',
+        ['cateringItems'=>\App\Models\MainSlider::
+        where('category',\App\Models\MainSlider::CATERING)->get()]);
 });
 
 Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getLogin']);

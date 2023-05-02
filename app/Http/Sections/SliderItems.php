@@ -47,7 +47,7 @@ class SliderItems extends Section implements Initializable
     public function initialize()
     {
         $this->addToNavigation()->setPriority(100)->setIcon('fa fa-lightbulb-o')
-            ->setTitle('Слайды на главной');
+            ->setTitle('Кейтеринг');
     }
 
     /**
@@ -67,8 +67,8 @@ class SliderItems extends Section implements Initializable
                 ->setOrderable(function ($query, $direction) {
                     $query->orderBy('created_at', $direction);
                 }),
-            AdminColumn::text('city', 'Город')->setWidth('250px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::text('description', 'комментарий')->setWidth('250px')->setHtmlAttribute('class', 'text-center'),
+            AdminColumn::text('city', 'картинка')->setWidth('250px')->setHtmlAttribute('class', 'text-center'),
+            AdminColumn::text('description', 'описание')->setWidth('250px')->setHtmlAttribute('class', 'text-center'),
             AdminColumn::text('created_at', 'Created / updated', 'updated_at')
                 ->setWidth('160px')
                 ->setOrderable(function ($query, $direction) {
@@ -104,10 +104,10 @@ class SliderItems extends Section implements Initializable
                 AdminFormElement::text('name', 'Имя')
                     ->required()]),
             AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('city', 'Город')
+                AdminFormElement::text('city', 'Картинка')
                     ->required()]),
             AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('description', 'Комментарий')
+                AdminFormElement::text('description', 'Описание')
                     ->required()])
         ]);
 
