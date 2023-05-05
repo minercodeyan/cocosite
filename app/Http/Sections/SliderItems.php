@@ -7,6 +7,7 @@ use AdminColumnFilter;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use App\Models\MainSlider;
 use Illuminate\Database\Eloquent\Model;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
@@ -47,7 +48,7 @@ class SliderItems extends Section implements Initializable
     public function initialize()
     {
         $this->addToNavigation()->setPriority(100)->setIcon('fa fa-lightbulb-o')
-            ->setTitle('Кейтеринг');
+            ->setTitle('Услуги');
     }
 
     /**
@@ -104,11 +105,13 @@ class SliderItems extends Section implements Initializable
                 AdminFormElement::text('name', 'Имя')
                     ->required()]),
             AdminFormElement::columns()->addColumn([
-                AdminFormElement::text('city', 'Картинка')
+                AdminFormElement::image('city', 'Картинка')
                     ->required()]),
             AdminFormElement::columns()->addColumn([
                 AdminFormElement::text('description', 'Описание')
-                    ->required()])
+                    ->required()]),
+            AdminFormElement::select('category','Категория')
+                ->setOptions(MainSlider::CATEGORIES),
         ]);
 
         $form->getButtons()->setButtons([

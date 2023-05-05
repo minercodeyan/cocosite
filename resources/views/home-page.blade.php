@@ -159,7 +159,8 @@
                         мероприятия, посоветует топовые позиции меню и просчитает итоговую стоимость.</p>
                     <div>
                         <input type="text" name="client_name" placeholder="введите имя" required>
-                        <input type="text" name="client_name" placeholder="введите имя" required>
+                        <input type="text" name="client_phone" placeholder="введите номер" required>
+                        <input type="hidden" name="app_type" value="1">
                     </div>
                     <div>
                         <textarea  placeholder="введите комментарий..." rows="16"  name="client_comment"></textarea>

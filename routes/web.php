@@ -54,14 +54,14 @@ Route::get('/food-box', function () {
 
     return view('food-box',
         ['cateringItems'=>\App\Models\MainSlider::
-        where('category',\App\Models\MainSlider::CATERING)->get()]);
+        where('category',\App\Models\MainSlider::FOOD_BOX)->get()]);
 });
 
 Route::get('/food-shet', function () {
 
     return view('food-shet',
         ['cateringItems'=>\App\Models\MainSlider::
-        where('category',\App\Models\MainSlider::CATERING)->get()]);
+        where('category',\App\Models\MainSlider::FOOD_SHET)->get()]);
 });
 
 Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getLogin']);

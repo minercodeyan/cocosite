@@ -6,6 +6,6 @@ Route::get('', ['as' => 'admin.dashboard', function () {
 }]);
 
 Route::get('information', ['as' => 'admin.information', function () {
-	$content = 'Админка для лучшего';
+	$content = 'Админка для лучшего сайта Big Up';
 	return AdminSection::view($content, 'Информация');
 }]);
