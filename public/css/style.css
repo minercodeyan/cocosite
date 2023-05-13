@@ -769,7 +769,7 @@ margin-bottom: 15px;
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox>input:checked+span::before {
     border-color: #656565;
-    background-image: url("../img/icon60/pngegg (1) 2 (1).png");
+    content: 'OK';
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
@@ -863,6 +863,7 @@ label {
 }
 
 .btn-primary{
+    font-size: 27px;
     padding: 5px 30px;
 }
 
