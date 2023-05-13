@@ -66,6 +66,18 @@ Route::get('/food-shet', function () {
 
 Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getLogin']);
 
+Route::get('/register', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegPage']);
+
+Route::post('/register', '\App\Http\Controllers\LoginController@registerStepFirst');
+
+Route::get('/register/step2', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegSecondPage']);
+
+Route::post('/register/step2', '\App\Http\Controllers\LoginController@registerStepSecond');
+
+Route::get('/register/step3', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegThirtPage']);
+
+Route::post('/register/step3', '\App\Http\Controllers\LoginController@registerStepThirt');
+
 Route::post('/login', '\App\Http\Controllers\LoginController@authenticate');
 
 Route::post('/make-application', '\App\Http\Controllers\ClientApplicationsController@makeApp')
