@@ -3,8 +3,12 @@
 @section('content')
     <div class="profile">
         <div class="container">
+            <div class="progress-m"><img src="{{asset('img/icon60/done-tick.png')}}" width="30">----------<span class="current">2</span>----------3</div>
             <div class="profile-inner">
-               дщд
+               <form method="post" action="{{ route('step2') }}">
+                   @csrf
+                   <button class="btn-2 big-btn">ДАЛЕЕ</button>
+               </form>
             </div>
         </div>
     </div>

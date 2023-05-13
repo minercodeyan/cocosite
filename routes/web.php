@@ -68,13 +68,13 @@ Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginCon
 
 Route::get('/register', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegPage']);
 
-Route::post('/register', '\App\Http\Controllers\LoginController@registerStepFirst');
+Route::post('/register', ['as' => 'step1', 'uses' => '\App\Http\Controllers\LoginController@registerStepFirst']);
 
-Route::get('/register/step2', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegSecondPage']);
+Route::get('/register/step2', ['as' => 'step2', 'uses' => '\App\Http\Controllers\LoginController@getRegSecondPage']);
 
 Route::post('/register/step2', '\App\Http\Controllers\LoginController@registerStepSecond');
 
-Route::get('/register/step3', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegThirtPage']);
+Route::get('/register/step3', ['as' => 'step3', 'uses' => '\App\Http\Controllers\LoginController@getRegThirtPage']);
 
 Route::post('/register/step3', '\App\Http\Controllers\LoginController@registerStepThirt');
 

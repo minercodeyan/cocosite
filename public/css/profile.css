@@ -26,6 +26,14 @@
     width: 30%;
 }
 
+.progress-m{
+    text-align: center; margin-top: -10px; font-size: 30px;
+}
+
+.current{
+    font-size: 90px;
+}
+
 
 .profile-inner aside{
     width: 30%;

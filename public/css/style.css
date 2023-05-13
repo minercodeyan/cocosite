@@ -112,7 +112,6 @@ table {
 	outline: none;
 	border: none;
 	border-radius: 3px;
-	height: 37px;
 	line-height: 37px;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -126,6 +125,12 @@ table {
 	touch-action: manipulation;
 	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
 }
+
+.big-btn{
+    font-size: 30px;
+    padding: 20px 70px;
+}
+
 .btn-2:focus-visible {
 	box-shadow: 0 0 0 3px lightskyblue;
 }
@@ -769,7 +774,7 @@ margin-bottom: 15px;
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox>input:checked+span::before {
     border-color: #656565;
-    content: 'OK';
+    background-image: url("../img/icon60/done-tick.png");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
