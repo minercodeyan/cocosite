@@ -30,7 +30,7 @@
                                 <p>Хотите заказать кейтеринг недорого?<br>
                                 Оставте ваши контактные данные и мы</br>
                                     расскажем все подробно</br>
-                                <a href="/lol" class="btn">Оставить<br>контакты</a>
+                                <a href="/register" class="btn">Оставить<br>контакты</a>
                                 </p>
                         </div><img src="{{asset('img/main.jpg')}}" alt="main">
                     </div>
@@ -78,7 +78,7 @@
                             <label for="phone" >Номер телефона</label>
                             <input type="tel" value="+375 ( )" name="client_phone" minlength="5" required>
                             <input type="hidden" name="app_type" value="0">
-                            <button class="btn-2" type="submit">Записаться на консультанию</button>
+                            <button class="btn-2" style="margin: 40px 40px 30px 0;" type="submit">Записаться на консультанию</button>
                         </form>
                     </div>
                 </div>

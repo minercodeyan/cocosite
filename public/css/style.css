@@ -108,7 +108,6 @@ table {
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 0 24px;
-	margin: 40px 40px 30px 0;
 	outline: none;
 	border: none;
 	border-radius: 3px;
@@ -946,7 +945,7 @@ label {
 
 .re-bin-summary{
     margin: 20px 0px;
-    border-top: #6a1c12 solid 5px;
+    border-top: #000000 solid 5px;
 }
 .little_btn{
     padding: 10px 25px;

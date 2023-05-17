@@ -13,6 +13,13 @@
     width: 65%;
 }
 
+.rg-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .profile-inner section .items{
     display: flex;
     flex-wrap: wrap;
