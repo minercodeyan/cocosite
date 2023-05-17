@@ -19,7 +19,7 @@ class AddUserHelpsTable extends Migration
             $table->string('phone_number');
             $table->date('birth_date');
             $table->string('category');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')
                 ->references('id')->on('users');
             $table->timestamps();
