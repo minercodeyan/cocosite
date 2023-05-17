@@ -64,19 +64,22 @@ Route::get('/food-shet', function () {
         where('category',\App\Models\MainSlider::FOOD_SHET)->get()]);
 });
 
+Route::get('/userdata', function () {
+
+    return view('profile-info',
+        ['userData'=>\App\Models\UserInfo::
+        where('user_id',auth()->user()->id)->first()]);
+});
+
 Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getLogin']);
 
 Route::get('/register', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegPage']);
 
 Route::post('/register', ['as' => 'step1', 'uses' => '\App\Http\Controllers\LoginController@registerStepFirst']);
 
-Route::get('/register/step2', ['as' => 'step2', 'uses' => '\App\Http\Controllers\LoginController@getRegSecondPage']);
+Route::post('/register/step2', '\App\Http\Controllers\LoginController@registerStepSecond')->name('step2');
 
-Route::post('/register/step2', '\App\Http\Controllers\LoginController@registerStepSecond');
-
-Route::get('/register/step3', ['as' => 'step3', 'uses' => '\App\Http\Controllers\LoginController@getRegThirtPage']);
-
-Route::post('/register/step3', '\App\Http\Controllers\LoginController@registerStepThirt');
+Route::post('/register/step3', '\App\Http\Controllers\LoginController@registerStepThirt')->name('step3');
 
 Route::post('/login', '\App\Http\Controllers\LoginController@authenticate');
 

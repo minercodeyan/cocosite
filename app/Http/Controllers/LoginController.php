@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\UserInfo;
+use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -43,26 +46,41 @@ class LoginController extends Controller
 
     public function registerStepFirst(Request $request)
     {
-        return redirect('/register/step2');
-    }
-
-    public function getRegSecondPage()
-    {
         return view('reg-step2');
     }
 
     public function registerStepSecond(Request $request)
     {
-        return redirect('/register/step3');
-    }
+        $userInfo = new UserInfo();
+        $userInfo->first_name = $request->post('firstname');
+        $userInfo->phone_number = $request->post('phone');
+        $userInfo->birth_date = $request->post('date_of_b');
+        $userInfo->category = $request->post('select');
+        $userInfo->save();
 
-    public function getRegThirtPage()
-    {
-        return view('reg-step3');
+        return view('reg-step3',['clientInfoId'=>$userInfo->id]);
     }
 
     public function registerStepThirt(Request $request)
     {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|confirmed'
+        ]);
+
+        $name = explode('@',$request->post('email'));
+
+        $user = User::create([
+            'name'=>$name[0],
+            'email'=>$request->post('email'),
+            'password'=>bcrypt($request->post('password')),
+        ]);
+        $userInfo = UserInfo::findOrFail($request->post('client_info_id'));
+        $userInfo->user_id = $user->id;
+        $userInfo->save();
+
+        Auth::login($user);
+
         return redirect('/');
     }
 

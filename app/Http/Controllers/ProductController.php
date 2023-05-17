@@ -23,8 +23,6 @@ class ProductController extends Controller
             throw new NotFoundHttpException();
         }
 
-
-
         if(!$request->all()){
             return view('products-page',
                 ['products'=>Product::where('category_id',$category->id)->get(), 'category'=>$category]

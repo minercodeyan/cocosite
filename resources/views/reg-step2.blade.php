@@ -14,13 +14,9 @@
                    <h3 style="margin: 0px 60px">Выберете категорию</h3>
                    <select style="font-size: 20px; padding: 10px 0px;border-radius: 5px; border: grey 1px solid; margin: 20px 60px" name="select">
                        <!--Supplement an id here instead of using 'name'-->
-                       <option value="1">Автокомпании</option>
-                       <option value="2">Банкетные залы</option>
-                       <option value="3">Фотографы</option>
-                       <option value="4">It- компании</option>
-                       <option value="5">Организаторы/ ведущие</option>
-                       <option value="6">Школы и академии</option>
-                       <option value="7">Банки</option>
+                       @foreach(\App\Models\UserInfo::SELECT as $key=>$value)
+                       <option value="{{$key}}">{{$value}}</option>
+                       @endforeach
                    </select>
                    <button type="submit" style="margin: 40px 340px" class="btn-2 big-btn">ДАЛЕЕ</button>
                </form>
