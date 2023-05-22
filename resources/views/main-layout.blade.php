@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -95,10 +95,9 @@
 <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
-<script>
-    document.getElementById('main-counter').innerText=JSON.parse(localStorage.getItem('productsInBin')).length
+    crossorigin="anonymous">
 </script>
+
 @yield('scripts')
 </body>
 

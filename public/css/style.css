@@ -969,9 +969,14 @@ label {
 }
 
 .minis,.plus{
+    cursor: pointer;
     border: 5px solid #a6a6a6;
     border-radius: 15px;
     padding: 0px 10px;
+}
+
+.minis:hover,.plus:hover{
+    background: grey;
 }
 
 .num{
@@ -985,6 +990,10 @@ label {
 
 .re-bin-product .main{
     margin-bottom: 20px;
+}
+
+.trash{
+    cursor: pointer;
 }
 
 .in-me{

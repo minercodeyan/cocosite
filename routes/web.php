@@ -64,16 +64,19 @@ Route::get('/food-shet', function () {
         where('category',\App\Models\MainSlider::FOOD_SHET)->get()]);
 });
 
+Route::post('/order', ['as' => 'order', 'uses' => '\App\Http\Controllers\OrderController@makeOrder'])
+    ->middleware(['auth']);
+
 Route::get('/userdata', function () {
 
     return view('profile-info',
         ['userData'=>\App\Models\UserInfo::
         where('user_id',auth()->user()->id)->first()]);
-});
+})->middleware(['auth']);;
 
 Route::get('/login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getLogin']);
 
-Route::get('/register', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@getRegPage']);
+Route::get('/register', ['as' => 'register', 'uses' => '\App\Http\Controllers\LoginController@getRegPage']);
 
 Route::post('/register', ['as' => 'step1', 'uses' => '\App\Http\Controllers\LoginController@registerStepFirst']);
 
@@ -86,14 +89,22 @@ Route::post('/login', '\App\Http\Controllers\LoginController@authenticate');
 Route::post('/make-application', '\App\Http\Controllers\ClientApplicationsController@makeApp')
     ->name('make-application');
 
-Route::get("catalog",'\App\Http\Controllers\ProductController@catalog');
+Route::get("/catalog",'\App\Http\Controllers\ProductController@catalog');
 
-Route::get("catalog/{categorySlug}", '\App\Http\Controllers\ProductController@index');
+Route::get("/catalog/{categorySlug}", '\App\Http\Controllers\ProductController@index');
 
-Route::get("catalog/{categorySlug}/{id}",'\App\Http\Controllers\ProductController@show');
+Route::get("/catalog/{categorySlug}/{id}",'\App\Http\Controllers\ProductController@show');
 
-Route::get("profile",'\App\Http\Controllers\ProfileController@index');
+Route::get("/profile",'\App\Http\Controllers\ProfileController@index')->middleware(['auth']);
 
-Route::get("change-password",'\App\Http\Controllers\ProfileController@changePassword');
+Route::get('/order')->middleware(['auth']);
 
-Route::post("change-password",'\App\Http\Controllers\ProfileController@changePassword')->name('change-password');
+
+Route::get('/orders-story',function (){
+
+    return view('orders-story',['orders'=>\App\Models\Order::query()->where('user_id',auth()->user()->id)->get()]);
+})->middleware(['auth']);
+
+Route::get("/change-password",'\App\Http\Controllers\ProfileController@changePassword')->middleware(['auth']);;
+
+Route::post("/change-password",'\App\Http\Controllers\ProfileController@changePassword')->name('change-password')->middleware(['auth']);;
