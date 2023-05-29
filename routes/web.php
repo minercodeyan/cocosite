@@ -47,7 +47,7 @@ Route::get('/coffe', function () {
 
     return view('coffe',
         ['cateringItems'=>\App\Models\MainSlider::
-        where('category',\App\Models\MainSlider::CATERING)->get()]);
+        where('category',\App\Models\MainSlider::COFFE)->get()]);
 });
 
 Route::get('/food-box', function () {

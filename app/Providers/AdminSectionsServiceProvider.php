@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Category;
 use App\Models\ClientApplication;
 use App\Models\MainSlider;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use SleepingOwl\Admin\Providers\AdminSectionsServiceProvider as ServiceProvider;
@@ -20,7 +21,8 @@ class AdminSectionsServiceProvider extends ServiceProvider
         Product::class =>'App\Http\Sections\Products',
         Category::class =>'App\Http\Sections\Categories',
         MainSlider::class =>'App\Http\Sections\SliderItems',
-        ClientApplication::class => 'App\Http\Sections\ClientApplications'
+        ClientApplication::class => 'App\Http\Sections\ClientApplications',
+        Order::class=>'App\Http\Sections\Orders'
     ];
 
     /**

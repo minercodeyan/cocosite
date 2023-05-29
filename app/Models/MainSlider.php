@@ -14,10 +14,12 @@ class MainSlider extends Model
     const CATERING = 1;
     const FOOD_SHET = 2;
     const FOOD_BOX = 3;
+    const COFFE = 4;
 
     const CATEGORIES = [
         self::CATERING => 'кейтеринг',
         self::FOOD_BOX => 'фуд-боксы',
-        self::FOOD_SHET=>'фуршет'
+        self::FOOD_SHET=>'фуршет',
+        self::COFFE=>'кофе-бейк'
     ];
 }
